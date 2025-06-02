@@ -6,6 +6,7 @@
 {% endblock  %}
 
 {% block css_files %}
+    <link rel='stylesheet' href='{% static "blog/post.css" %}'>
     <link rel='stylesheet' href='{% static "blog/index.css" %}'>
 {% endblock %}
 
@@ -29,17 +30,7 @@
         <h2>My Lastest Thoughts</h2>
 
         <ul>
-            <li>
-                <article class='post'>
-                    <a href=''>
-                        <img src='{% static "blog/images/Heiwajima.jpg" %}' alt='Visit Japan' />
-                        <div class='post__content'>
-                            <h3>Visit Japan</h3>
-                            <p>There is nothing more relaxing than visiting Japan and soaking in hot springs.</p>
-                        </div>
-                    </a>
-                </article>
-            </li>
+            {% include "blog/includes/post.html" %}
         </ul>
     </section>
 
